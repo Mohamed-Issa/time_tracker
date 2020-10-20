@@ -8,13 +8,13 @@ import 'package:time_tracker_flutter_course/widgets/platform_widget.dart';
 class PlatformAlertDialog extends PlatFormWidget {
   final String title;
   final String content;
-  final String cancelActiontext;
+  final String cancelActionText;
   final String defaultActionText;
 
   PlatformAlertDialog({
     @required this.title,
     @required this.content,
-    this.cancelActiontext,
+    this.cancelActionText,
     @required this.defaultActionText,
   })  : assert(title != null),
         assert(content != null),
@@ -53,11 +53,11 @@ class PlatformAlertDialog extends PlatFormWidget {
 
   List<Widget> _buildActions(BuildContext context) {
     final actions = <Widget>[];
-    if (cancelActiontext != null) {
+    if (cancelActionText != null) {
       actions.add(
         PlatformAlertDialogAction(
             onPressed: () => Navigator.of(context).pop(false),
-            child: Text(cancelActiontext)),
+            child: Text(cancelActionText)),
       );
     }
     actions.add(
